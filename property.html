@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Property Group - Property Dealer & Real Estate Consultants</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Oswald -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        banner: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#1e293b',
+                        brandPrimary: '#b91c1c', // Rosso primario del logo
+                        brandBlue: '#2563eb',
+                        brandSoftBg: '#f8fafc',
+                        brandCardBg: '#ffffff',    
+                        brandAccent: '#d97706',    
+                        brandBorder: '#e2e8f0'     
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-red-100 selection:text-red-700">
+
+    <!-- TOPBAR -->
+    <div class="bg-slate-100 border-b border-slate-200 py-2.5 px-4 text-xs md:text-sm text-slate-600">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-red-50 text-red-700 border border-red-200 px-2.5 py-0.5 rounded-full font-semibold text-[11px] uppercase tracking-wider">
+                    <i class="fas fa-check-circle mr-1"></i> Verified Property Dealer
+                </span>
+                <span class="hidden md:inline text-slate-400">•</span>
+                <span class="hidden md:inline text-slate-500 font-medium">Trusted Real Estate &amp; NRI Property Services</span>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-5">
+                <a href="tel:9815638933" class="flex items-center gap-1.5 hover:text-red-700 font-semibold transition">
+                    <i class="fas fa-phone-alt text-red-700"></i> <span>9815638933</span>
+                </a>
+                <a href="https://wa.me/918847503303" target="_blank" class="flex items-center gap-1.5 text-emerald-600 font-semibold hover:underline">
+                    <i class="fab fa-whatsapp text-base"></i> <span>8847503303</span>
+                </a>
+                <a href="mailto:profitpropertygroup.jalandhar@gmail.com" class="hidden lg:flex items-center gap-1.5 hover:text-red-700 font-semibold transition">
+                    <i class="fas fa-envelope text-red-700"></i> <span>profitpropertygroup.jalandhar@gmail.com</span>
+                </a>
+                
+                <div class="flex items-center space-x-2.5 border-l border-slate-300 pl-3">
+                    <a href="https://www.instagram.com/profit_property_group?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="text-slate-400 hover:text-pink-600 transition" title="Instagram">
+                        <i class="fab fa-instagram text-base"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profit.property.group" target="_blank" class="text-slate-400 hover:text-blue-600 transition" title="Facebook">
+                        <i class="fab fa-facebook-f text-base"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- LOGO DI TESTATA CON CASETTA ROSSA -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="bg-red-50 p-2 rounded-xl border border-red-100 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-red-700" viewBox="0 0 200 120" fill="currentColor">
+                        <polygon points="100,10 170,70 155,70 100,22 45,70 30,70" />
+                        <rect x="135" y="22" width="12" height="25" />
+                        <polygon points="100,32 150,75 138,75 100,42 62,75 50,75" fill="#881337" />
+                        <rect x="110" y="48" width="6" height="6" fill="#ffffff" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-lg md:text-xl font-black tracking-tight text-slate-900 block leading-none font-banner">
+                        PROFIT<span class="text-red-700">_PROPERTY_</span>GROUP
+                    </span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.25em]">Real Estate Consultants</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-600 text-sm">
+                <a href="#home" class="hover:text-red-700 transition">Home</a>
+                <a href="#services" class="hover:text-red-700 transition">Services</a>
+                <a href="#properties" class="hover:text-red-700 transition">Properties</a>
+                <a href="#why-us" class="hover:text-red-700 transition">Why Us</a>
+                <a href="#contact" class="hover:text-red-700 transition">Contact Us</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-2.5">
+                <a href="https://wa.me/918847503303" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold py-2 px-3.5 rounded-xl transition text-xs flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>8847503303</span>
+                </a>
+                <a href="tel:9815638933" class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-xl shadow-sm transition text-xs flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>9815638933</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2.5 text-slate-700 rounded-xl hover:bg-slate-100 focus:outline-none" aria-label="Open Menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Home</a>
+            <a href="#services" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Services</a>
+            <a href="#properties" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Properties</a>
+            <a href="#why-us" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Why Us</a>
+            <a href="#contact" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Contact Us</a>
+            
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="https://wa.me/918847503303" target="_blank" class="w-full bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp: 8847503303
+                </a>
+                <a href="tel:9815638933" class="w-full bg-red-700 text-white font-bold py-2.5 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Call: 9815638933
+                </a>
+                <a href="mailto:profitpropertygroup.jalandhar@gmail.com" class="w-full bg-slate-100 text-slate-700 font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 border border-slate-200">
+                    <i class="fas fa-envelope text-red-700"></i> profitpropertygroup.jalandhar@gmail.com
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative py-12 md:py-20 lg:py-24 bg-gradient-to-b from-red-50/30 via-slate-50 to-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-red-100/70 text-red-800 border border-red-200 px-3.5 py-1.5 rounded-full mb-6">
+                    <i class="fas fa-star text-xs text-amber-600"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider">100% Fair &amp; Direct Owner Deals</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
+                    Your Trusted <span class="text-red-700">Property Dealer</span> &amp; Real Estate Advisor.
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Buy, sell, and rent top residential Kothis, Flats, Plots, and Commercial Showrooms. Complete assistance for Indian and Overseas NRI clients with registry &amp; legal work.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+                    <a href="#properties" class="w-full sm:w-auto bg-red-700 hover:bg-red-800 text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition text-sm text-center">
+                        Explore Properties
+                    </a>
+                    <a href="https://wa.me/918847503303" target="_blank" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-emerald-700 border border-emerald-300 font-bold px-6 py-3.5 rounded-xl transition text-xs text-center flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg text-emerald-600"></i> Chat with Agent
+                    </a>
+                </div>
+            </div>
+
+            <!-- HERO CAROUSEL: FOTO web/1.jpeg + FOTO web/21.jpeg + LOGO BANNER -->
+            <div class="lg:col-span-5 relative">
+                <div class="bg-white p-3 rounded-3xl shadow-xl border border-slate-200 relative z-10">
+                    <div class="swiper heroSwiper rounded-2xl overflow-hidden">
+                        <div class="swiper-wrapper">
+                            
+                            <!-- SLIDE 1: Foto web/1.jpeg -->
+                            <div class="swiper-slide">
+                                <img src="web/1.jpeg" alt="Luxury Kothi 1" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                            </div>
+
+                            <!-- SLIDE 2: Foto web/21.jpeg -->
+                            <div class="swiper-slide">
+                                <img src="web/21.jpeg" alt="Luxury Kothi 21" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                            </div>
+
+                            <!-- SLIDE 3: LOGO BANNER VETTORIALE -->
+                            <div class="swiper-slide">
+                                <div class="w-full h-72 sm:h-96 bg-white rounded-2xl border-2 border-slate-200 p-4 flex flex-col justify-between items-center text-center shadow-inner relative overflow-hidden">
+                                    
+                                    <!-- Numeri di Telefono Superiori -->
+                                    <div class="w-full flex justify-between items-center text-slate-900 font-bold text-xs sm:text-sm px-2">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-phone-alt text-red-700"></i>
+                                            <span>98156 38933</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-phone-alt text-red-700"></i>
+                                            <span>88475 03303</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Icona Casetta Disegnata (Vettoriale Fedele) -->
+                                    <div class="my-auto py-2">
+                                        <svg class="w-32 sm:w-40 h-20 sm:h-24 mx-auto text-red-700" viewBox="0 0 200 110" fill="currentColor">
+                                            <!-- Tetto esterno con comignolo -->
+                                            <polygon points="100,5 175,70 160,70 100,18 40,70 25,70" />
+                                            <rect x="140" y="18" width="12" height="28" />
+                                            <!-- Tetto interno sovrapposto -->
+                                            <polygon points="100,28 155,75 142,75 100,38 58,75 45,75" fill="#881337" />
+                                            <!-- Finestrella -->
+                                            <rect x="108" y="46" width="7" height="7" fill="#ffffff" />
+                                            <rect x="116" y="46" width="7" height="7" fill="#ffffff" />
+                                            <rect x="108" y="54" width="7" height="7" fill="#ffffff" />
+                                            <rect x="116" y="54" width="7" height="7" fill="#ffffff" />
+                                        </svg>
+
+                                        <!-- Testo Marchio Principale -->
+                                        <h3 class="text-xl sm:text-2xl md:text-3xl font-black font-banner tracking-wide text-red-800 mt-1">
+                                            PROFIT_PROPERTY_GROUP
+                                        </h3>
+                                    </div>
+
+                                    <!-- Fascia Rossa dei Servizi -->
+                                    <div class="w-full bg-red-800 text-white py-2 px-3 rounded-md text-[11px] sm:text-xs font-semibold tracking-wide">
+                                        Deals In: Sale &amp; Purchase Of Kothi, Shop, Plots, Agriculture Land Etc.
+                                    </div>
+
+                                    <!-- Testo Servizio di Affitto -->
+                                    <div class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-800 py-1">
+                                        TO-LET SERVICE ALSO AVAILABLE
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next text-white drop-shadow-md"></div>
+                        <div class="swiper-button-prev text-white drop-shadow-md"></div>
+                    </div>
+
+                    <div class="p-4 bg-white rounded-xl mt-2 flex items-center justify-between border border-slate-100">
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 block uppercase">Official Branding</span>
+                            <span class="text-sm font-bold text-slate-800">Profit Property Group Logo</span>
+                        </div>
+                        <a href="tel:9815638933" class="bg-red-50 text-red-700 hover:bg-red-700 hover:text-white font-bold p-2.5 rounded-lg transition text-xs">
+                            <i class="fas fa-phone-alt"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-16 md:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-red-700 font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Our Services</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">Complete Real Estate Solutions</h2>
+                <p class="text-slate-500 text-sm mt-2">End-to-end guidance for all your property buying, selling, and leasing requirements.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition duration-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-red-100 text-red-700 rounded-xl flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Residential Kothis</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Luxury Kothis, 2/3/4 BHK Flats, Builder Floors, and Verified Residential Plots in prime locations.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918847503303" target="_blank" class="mt-6 text-red-700 font-semibold text-xs inline-flex items-center gap-1.5 hover:underline">
+                        Enquire Now <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition duration-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Commercial Properties</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Prime location Showrooms, Shops on main roads, and High-ROI Commercial Office spaces.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918847503303" target="_blank" class="mt-6 text-red-700 font-semibold text-xs inline-flex items-center gap-1.5 hover:underline">
+                        Enquire Now <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition duration-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Rental &amp; Legal Support</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Hassle-free renting for Residential Houses &amp; Commercial Spaces with proper legal Lease Agreements.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918847503303" target="_blank" class="mt-6 text-red-700 font-semibold text-xs inline-flex items-center gap-1.5 hover:underline">
+                        Enquire Now <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition duration-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-xl mb-5">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Land &amp; Plots</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Expert deal negotiation for Agricultural Land, Commercial Land, and Residential Plots.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918847503303" target="_blank" class="mt-6 text-red-700 font-semibold text-xs inline-flex items-center gap-1.5 hover:underline">
+                        Enquire Now <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROPERTIES SECTION -->
+    <section id="properties" class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-red-700 font-bold text-xs uppercase tracking-wider">Property Portfolio</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Featured Properties</h2>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 bg-white p-1.5 rounded-xl border border-slate-200 self-start md:self-auto">
+                    <button onclick="filterProperties('all', event)" class="filter-btn active bg-red-700 text-white font-semibold px-3.5 py-1.5 rounded-lg text-xs transition">All Properties</button>
+                    <button onclick="filterProperties('residential', event)" class="filter-btn text-slate-600 hover:text-slate-900 font-semibold px-3.5 py-1.5 rounded-lg text-xs transition">Residential Kothi</button>
+                </div>
+            </div>
+
+            <!-- Property Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- CARD 1 - SLIDER WITH 15 PHOTOS (web/1.jpeg - web/15.jpeg) -->
+                <div class="property-card residential bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative">
+                        <!-- Swiper Slider Card 1 -->
+                        <div class="swiper card1Swiper h-64 sm:h-72 w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="web/1.jpeg" alt="Photo 1" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/2.jpeg" alt="Photo 2" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/3.jpeg" alt="Photo 3" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/4.jpeg" alt="Photo 4" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/5.jpeg" alt="Photo 5" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/6.jpeg" alt="Photo 6" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/7.jpeg" alt="Photo 7" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/8.jpeg" alt="Photo 8" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/9.jpeg" alt="Photo 9" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/10.jpeg" alt="Photo 10" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/11.jpeg" alt="Photo 11" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/12.jpeg" alt="Photo 12" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/13.jpeg" alt="Photo 13" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/14.jpeg" alt="Photo 14" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/15.jpeg" alt="Photo 15" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next !text-white drop-shadow"></div>
+                            <div class="swiper-button-prev !text-white drop-shadow"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-bold text-red-700 uppercase tracking-wider block mb-1">Luxury Villa &amp; Kothi</span>
+                            <h3 class="text-xl font-extrabold text-slate-800 mb-1">Modern Luxury Kothi</h3>
+                            <p class="text-slate-500 text-xs mb-3"><i class="fas fa-map-marker-alt text-amber-600 mr-1"></i> Prime Location</p>
+                            
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                                Premium finishing with granite entrance porch, wooden accent walls, glass &amp; stainless steel staircase, LED vanity mirror, and luxury marble-finish tile bathrooms.
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-2 border-y border-slate-100 py-3 mb-5 text-center text-xs text-slate-600 font-medium">
+                                <div><i class="fas fa-gem text-red-700 block text-sm mb-1"></i> Granite &amp; Tiles</div>
+                                <div><i class="fas fa-lightbulb text-red-700 block text-sm mb-1"></i> LED Lighting</div>
+                                <div><i class="fas fa-shield-alt text-red-700 block text-sm mb-1"></i> Glass &amp; Steel</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="tel:9815638933" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fas fa-phone-alt text-red-700"></i> Call Agent
+                            </a>
+                            <a href="https://wa.me/918847503303" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 - SLIDER WITH 17 PHOTOS (web/21.jpeg - web/37.jpeg) -->
+                <div class="property-card residential bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative">
+                        <!-- Swiper Slider Card 2 -->
+                        <div class="swiper card2Swiper h-64 sm:h-72 w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="web/21.jpeg" alt="Photo 21" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/22.jpeg" alt="Photo 22" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/23.jpeg" alt="Photo 23" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/24.jpeg" alt="Photo 24" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/25.jpeg" alt="Photo 25" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/26.jpeg" alt="Photo 26" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/27.jpeg" alt="Photo 27" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/28.jpeg" alt="Photo 28" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/29.jpeg" alt="Photo 29" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/30.jpeg" alt="Photo 30" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/31.jpeg" alt="Photo 31" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/32.jpeg" alt="Photo 32" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/33.jpeg" alt="Photo 33" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/34.jpeg" alt="Photo 34" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/35.jpeg" alt="Photo 35" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/36.jpeg" alt="Photo 36" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="web/37.jpeg" alt="Photo 37" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next !text-white drop-shadow"></div>
+                            <div class="swiper-button-prev !text-white drop-shadow"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-bold text-red-700 uppercase tracking-wider block mb-1">Designer Kothi</span>
+                            <h3 class="text-xl font-extrabold text-slate-800 mb-1">Designer Independent House</h3>
+                            <p class="text-slate-500 text-xs mb-3"><i class="fas fa-map-marker-alt text-amber-600 mr-1"></i> Prime Neighborhood</p>
+
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                                Spacious independent property with modern layout, contemporary fittings, and dedicated covered car parking space.
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-2 border-y border-slate-100 py-3 mb-5 text-center text-xs text-slate-600 font-medium">
+                                <div><i class="fas fa-bed text-red-700 block text-sm mb-1"></i> Spacious</div>
+                                <div><i class="fas fa-car text-red-700 block text-sm mb-1"></i> Car Parking</div>
+                                <div><i class="fas fa-ruler-combined text-red-700 block text-sm mb-1"></i> Full Plot</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="tel:9815638933" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fas fa-phone-alt text-red-700"></i> Call Agent
+                            </a>
+                            <a href="https://wa.me/918847503303" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US & ENQUIRY FORM -->
+    <section id="why-us" class="py-16 md:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-6">
+                <span class="text-red-700 font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Why Choose Us</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-6">
+                    Professional Real Estate Advisory Services
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-red-50 text-red-700 rounded-xl flex items-center justify-center text-lg shrink-0 border border-red-100">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-slate-800">100% Fair &amp; Direct Owner Deals</h4>
+                            <p class="text-slate-600 text-xs mt-1 leading-relaxed">No middleman price padding. Complete ethical deals ensuring full protection for buyers and sellers.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg shrink-0 border border-amber-100">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-slate-800">Dedicated NRI Property Support</h4>
+                            <p class="text-slate-600 text-xs mt-1 leading-relaxed">Specialized help for Non-Resident Indians (NRIs) with live video tours, power of attorney guidance, and remote property management.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-lg shrink-0 border border-emerald-100">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-slate-800">Complete Legal &amp; Registry Work</h4>
+                            <p class="text-slate-600 text-xs mt-1 leading-relaxed">End-to-end support including title verification, property loan assistance, registry paper process, and key handover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div id="contact" class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-1">Enquire Now / Book Site Visit</h3>
+                <p class="text-slate-500 text-xs mb-6">Fill in your requirements below and our agent will call you back shortly.</p>
+
+                <form action="https://formspree.io/f/mrpgvzjg" method="POST" class="space-y-4">
+                    <input type="hidden" name="_subject" value="New Property Inquiry - Profit Property Group">
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name" class="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 text-xs transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile / WhatsApp Number</label>
+                        <input type="tel" name="phone" required placeholder="Enter your phone number" class="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 text-xs transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Select Property Requirement</label>
+                        <select name="property_type" class="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 text-xs transition">
+                            <option value="Residential Kothi">Residential Kothi</option>
+                            <option value="Commercial Property">Commercial Property</option>
+                            <option value="Plot / Land">Plot / Land</option>
+                            <option value="Rental Property">Rental Property</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements</label>
+                        <textarea name="message" rows="3" placeholder="Tell us about your budget or preferred location..." class="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 text-xs transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-3.5 rounded-xl shadow-md transition text-xs flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Send Enquiry
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10 px-4 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <div>
+                <p class="font-bold text-white text-sm tracking-wider font-banner">PROFIT_PROPERTY_GROUP</p>
+                <p class="mt-1 text-slate-500">Property Dealer &amp; Real Estate Consultants</p>
+            </div>
+            <p>© 2026 Profit Property Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SWIPER JS LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- SLIDER & INTERACTION SCRIPT -->
+    <script>
+        // Hero Swiper Initialization
+        const heroSwiper = new Swiper('.heroSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.heroSwiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.heroSwiper .swiper-button-next',
+                prevEl: '.heroSwiper .swiper-button-prev',
+            },
+        });
+
+        // Card 1 Swiper Initialization (15 Photos: web/1.jpeg - web/15.jpeg)
+        const card1Swiper = new Swiper('.card1Swiper', {
+            loop: true,
+            pagination: {
+                el: '.card1Swiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.card1Swiper .swiper-button-next',
+                prevEl: '.card1Swiper .swiper-button-prev',
+            },
+        });
+
+        // Card 2 Swiper Initialization (17 Photos: web/21.jpeg - web/37.jpeg)
+        const card2Swiper = new Swiper('.card2Swiper', {
+            loop: true,
+            pagination: {
+                el: '.card2Swiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.card2Swiper .swiper-button-next',
+                prevEl: '.card2Swiper .swiper-button-prev',
+            },
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Property Filtering
+        function filterProperties(category, event) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-red-700', 'text-white');
+                btn.classList.add('text-slate-600');
+            });
+            
+            event.target.classList.add('bg-red-700', 'text-white');
+            event.target.classList.remove('text-slate-600');
+
+            const cards = document.querySelectorAll('.property-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
