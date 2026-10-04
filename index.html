@@ -97,6 +97,7 @@
                 <a href="#home" class="hover:text-red-700 transition">Home</a>
                 <a href="#services" class="hover:text-red-700 transition">Services</a>
                 <a href="#properties" class="hover:text-red-700 transition">Properties</a>
+                <a href="#inquiry" class="hover:text-red-700 transition">Send Inquiry</a>
                 <a href="#why-us" class="hover:text-red-700 transition">Why Us</a>
                 <a href="#contact" class="hover:text-red-700 transition">Contact Us</a>
             </nav>
@@ -121,6 +122,7 @@
             <a href="#home" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Home</a>
             <a href="#services" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Services</a>
             <a href="#properties" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Properties</a>
+            <a href="#inquiry" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Send Inquiry</a>
             <a href="#why-us" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Why Us</a>
             <a href="#contact" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Contact Us</a>
             
@@ -166,13 +168,13 @@
                 </div>
             </div>
 
-            <!-- HERO CAROUSEL: 1. BANNER LOGO -> 2. FOTO 1.jpeg -> 3. FOTO 21.jpeg -->
+            <!-- HERO CAROUSEL: LOGO BANNER -> 1.jpeg -> 21.jpeg -> 40.jpeg -->
             <div class="lg:col-span-5 relative">
                 <div class="bg-white p-3 rounded-3xl shadow-xl border border-slate-200 relative z-10">
                     <div class="swiper heroSwiper rounded-2xl overflow-hidden">
                         <div class="swiper-wrapper">
                             
-                            <!-- SLIDE 1: LOGO BANNER (PRIMA FOTO) -->
+                            <!-- SLIDE 1: LOGO BANNER -->
                             <div class="swiper-slide">
                                 <div class="w-full h-72 sm:h-96 bg-white rounded-2xl border-2 border-slate-200 p-4 flex flex-col justify-between items-center text-center shadow-inner relative overflow-hidden">
                                     
@@ -214,14 +216,19 @@
                                 </div>
                             </div>
 
-                            <!-- SLIDE 2: Foto 1.jpeg (SECONDA FOTO) -->
+                            <!-- SLIDE 2: Foto 1.jpeg -->
                             <div class="swiper-slide">
                                 <img src="1.jpeg" alt="Luxury Kothi 1" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
                             </div>
 
-                            <!-- SLIDE 3: Foto 21.jpeg (TERZA FOTO) -->
+                            <!-- SLIDE 3: Foto 21.jpeg -->
                             <div class="swiper-slide">
                                 <img src="21.jpeg" alt="Luxury Kothi 21" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                            </div>
+
+                            <!-- SLIDE 4: TERZA CASA (40.jpeg) -->
+                            <div class="swiper-slide">
+                                <img src="40.jpeg" alt="Luxury Kothi 40" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
                             </div>
 
                         </div>
@@ -324,10 +331,10 @@
                 </div>
             </div>
 
-            <!-- Property Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Property Grid: 3 Colonne -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 
-                <!-- CARD 1 - SLIDER WITH 15 PHOTOS (1.jpeg - 15.jpeg) -->
+                <!-- CARD 1 - CASA 1 (1.jpeg - 15.jpeg) -->
                 <div class="property-card residential bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 flex flex-col">
                     <div class="relative">
                         <div class="swiper card1Swiper h-64 sm:h-72 w-full">
@@ -382,7 +389,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 2 - SLIDER WITH 17 PHOTOS (21.jpeg - 37.jpeg) -->
+                <!-- CARD 2 - CASA 2 (21.jpeg - 37.jpeg) -->
                 <div class="property-card residential bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 flex flex-col">
                     <div class="relative">
                         <div class="swiper card2Swiper h-64 sm:h-72 w-full">
@@ -438,6 +445,129 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- CARD 3 - CASA 3 (Foto da 40.jpeg a 62.jpeg) -->
+                <div class="property-card residential bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative">
+                        <div class="swiper card3Swiper h-64 sm:h-72 w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="40.jpeg" alt="Photo 40" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="41.jpeg" alt="Photo 41" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="42.jpeg" alt="Photo 42" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="43.jpeg" alt="Photo 43" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="44.jpeg" alt="Photo 44" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="45.jpeg" alt="Photo 45" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="46.jpeg" alt="Photo 46" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="47.jpeg" alt="Photo 47" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="48.jpeg" alt="Photo 48" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="49.jpeg" alt="Photo 49" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="50.jpeg" alt="Photo 50" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="51.jpeg" alt="Photo 51" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="52.jpeg" alt="Photo 52" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="53.jpeg" alt="Photo 53" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="54.jpeg" alt="Photo 54" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="55.jpeg" alt="Photo 55" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="56.jpeg" alt="Photo 56" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="57.jpeg" alt="Photo 57" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="58.jpeg" alt="Photo 58" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="59.jpeg" alt="Photo 59" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="60.jpeg" alt="Photo 60" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="61.jpeg" alt="Photo 61" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="62.jpeg" alt="Photo 62" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next !text-white drop-shadow"></div>
+                            <div class="swiper-button-prev !text-white drop-shadow"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-bold text-red-700 uppercase tracking-wider block mb-1">Luxury Kothi</span>
+                            <h3 class="text-xl font-extrabold text-slate-800 mb-1">Luxury East Facing House</h3>
+                            <p class="text-slate-500 text-xs mb-3"><i class="fas fa-map-marker-alt text-amber-600 mr-1"></i> Near Model Town</p>
+
+                            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                                Ultra-luxury modern house in prime location Near Model Town. Dimension 30 * 70, East facing property with high-end architecture, premium interiors, and top-quality finishings.
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-2 border-y border-slate-100 py-3 mb-5 text-center text-xs text-slate-600 font-medium">
+                                <div><i class="fas fa-ruler-combined text-red-700 block text-sm mb-1"></i> 30 * 70 Ft</div>
+                                <div><i class="fas fa-compass text-red-700 block text-sm mb-1"></i> East Facing</div>
+                                <div><i class="fas fa-crown text-red-700 block text-sm mb-1"></i> Luxury House</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="tel:9815638933" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fas fa-phone-alt text-red-700"></i> Call Agent
+                            </a>
+                            <a href="https://wa.me/918847503303" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5">
+                                <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INQUIRY FORM SECTION -->
+    <section id="inquiry" class="py-16 md:py-24 bg-slate-100 border-b border-slate-200">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-slate-200">
+                
+                <div class="text-center mb-8">
+                    <span class="text-red-700 font-bold text-xs uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full border border-red-100">Quick Inquiry</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">Send Us Your Property Request</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Fill in the details below to contact our team directly via WhatsApp or Phone.</p>
+                </div>
+
+                <form onsubmit="sendInquiryToWhatsApp(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+                            <input type="text" id="reqName" required placeholder="Enter full name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone / WhatsApp *</label>
+                            <input type="tel" id="reqPhone" required placeholder="Enter phone number" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Property Type</label>
+                            <select id="reqType" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-sm bg-white">
+                                <option value="Residential Kothi / House">Residential Kothi / House</option>
+                                <option value="Residential Plot">Residential Plot</option>
+                                <option value="Commercial Shop / Showroom">Commercial Shop / Showroom</option>
+                                <option value="Agricultural Land">Agricultural Land</option>
+                                <option value="Rental Property (To-Let)">Rental Property (To-Let)</option>
+                                <option value="Other Query">Other Query</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">I Want To</label>
+                            <select id="reqAction" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-sm bg-white">
+                                <option value="Buy">Buy Property</option>
+                                <option value="Sell">Sell Property</option>
+                                <option value="Rent / Lease">Rent / Lease</option>
+                                <option value="General Advice">General Advice</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message / Requirements</label>
+                        <textarea id="reqMessage" rows="3" placeholder="Budget, preferred location, size, or any specific requirement..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Send Request via WhatsApp
+                    </button>
+                </form>
 
             </div>
         </div>
@@ -511,6 +641,7 @@
                     <li><a href="#home" class="hover:text-white">Home</a></li>
                     <li><a href="#services" class="hover:text-white">Services</a></li>
                     <li><a href="#properties" class="hover:text-white">Featured Properties</a></li>
+                    <li><a href="#inquiry" class="hover:text-white">Send Inquiry</a></li>
                     <li><a href="#why-us" class="hover:text-white">Why Choose Us</a></li>
                 </ul>
             </div>
@@ -558,6 +689,12 @@
             navigation: { nextEl: '.card2Swiper .swiper-button-next', prevEl: '.card2Swiper .swiper-button-prev' }
         });
 
+        const card3Swiper = new Swiper('.card3Swiper', {
+            loop: true,
+            pagination: { el: '.card3Swiper .swiper-pagination', clickable: true },
+            navigation: { nextEl: '.card3Swiper .swiper-button-next', prevEl: '.card3Swiper .swiper-button-prev' }
+        });
+
         // Filter Function
         function filterProperties(category, event) {
             const buttons = document.querySelectorAll('.filter-btn');
@@ -575,6 +712,20 @@
                     card.style.display = 'none';
                 }
             });
+        }
+
+        // Function to send Inquiry Form data to WhatsApp
+        function sendInquiryToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('reqName').value;
+            const phone = document.getElementById('reqPhone').value;
+            const type = document.getElementById('reqType').value;
+            const action = document.getElementById('reqAction').value;
+            const message = document.getElementById('reqMessage').value;
+
+            const text = `Hello Profit Property Group,%0A%0AI would like to submit a request:%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Action:* ${encodeURIComponent(action)} ${encodeURIComponent(type)}%0A- *Details:* ${encodeURIComponent(message)}`;
+
+            window.open(`https://wa.me/918847503303?text=${text}`, '_blank');
         }
     </script>
 </body>
