@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- GLightbox CSS (Per ingrandire e scorrere le foto a tutto schermo) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
     <script>
         tailwind.config = {
@@ -95,6 +97,7 @@
 
             <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-600 text-sm">
                 <a href="#home" class="hover:text-red-700 transition">Home</a>
+                <a href="#videos" class="hover:text-red-700 transition">Video</a>
                 <a href="#services" class="hover:text-red-700 transition">Services</a>
                 <a href="#properties" class="hover:text-red-700 transition">Properties</a>
                 <a href="#inquiry" class="hover:text-red-700 transition">Send Inquiry</a>
@@ -121,6 +124,7 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
             <a href="#home" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Home</a>
+            <a href="#videos" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Video</a>
             <a href="#services" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Services</a>
             <a href="#properties" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Properties</a>
             <a href="#inquiry" class="mobile-link block py-2 text-slate-700 font-semibold border-b border-slate-100">Send Inquiry</a>
@@ -170,7 +174,7 @@
                 </div>
             </div>
 
-            <!-- HERO CAROUSEL: LOGO BANNER -> 1.jpeg -> 21.jpeg -> 40.jpeg -->
+            <!-- HERO CAROUSEL -->
             <div class="lg:col-span-5 relative">
                 <div class="bg-white p-3 rounded-3xl shadow-xl border border-slate-200 relative z-10">
                     <div class="swiper heroSwiper rounded-2xl overflow-hidden">
@@ -220,17 +224,23 @@
 
                             <!-- SLIDE 2: Foto 1.jpeg -->
                             <div class="swiper-slide">
-                                <img src="1.jpeg" alt="Luxury Kothi 1" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                                <a href="1.jpeg" class="glightbox" data-gallery="hero">
+                                    <img src="1.jpeg" alt="Luxury Kothi 1" class="w-full h-72 sm:h-96 object-cover rounded-2xl cursor-pointer">
+                                </a>
                             </div>
 
                             <!-- SLIDE 3: Foto 21.jpeg -->
                             <div class="swiper-slide">
-                                <img src="21.jpeg" alt="Luxury Kothi 21" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                                <a href="21.jpeg" class="glightbox" data-gallery="hero">
+                                    <img src="21.jpeg" alt="Luxury Kothi 21" class="w-full h-72 sm:h-96 object-cover rounded-2xl cursor-pointer">
+                                </a>
                             </div>
 
-                            <!-- SLIDE 4: TERZA CASA (40.jpeg) -->
+                            <!-- SLIDE 4: Foto 40.jpeg -->
                             <div class="swiper-slide">
-                                <img src="40.jpeg" alt="Luxury Kothi 40" class="w-full h-72 sm:h-96 object-cover rounded-2xl">
+                                <a href="40.jpeg" class="glightbox" data-gallery="hero">
+                                    <img src="40.jpeg" alt="Luxury Kothi 40" class="w-full h-72 sm:h-96 object-cover rounded-2xl cursor-pointer">
+                                </a>
                             </div>
 
                         </div>
@@ -241,6 +251,29 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- SEZIONE VIDEO MINIMAL (SENZA AUDIO - 2 VIDEO: video1.mp4 e video2.mp4) -->
+    <section id="videos" class="py-10 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center border border-slate-800">
+                
+                <video id="featuredVideo" class="w-full h-full object-contain" autoplay muted playsinline controls src="video1.mp4">
+                    Il tuo browser non supporta la riproduzione video.
+                </video>
+
+                <!-- Pulsante Indietro -->
+                <button onclick="prevVideo()" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-red-700 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition border border-white/20 z-10" aria-label="Video precedente">
+                    <i class="fas fa-chevron-left text-base sm:text-lg"></i>
+                </button>
+
+                <!-- Pulsante Avanti -->
+                <button onclick="nextVideo()" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-red-700 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition border border-white/20 z-10" aria-label="Video successivo">
+                    <i class="fas fa-chevron-right text-base sm:text-lg"></i>
+                </button>
+
+            </div>
         </div>
     </section>
 
@@ -341,21 +374,21 @@
                     <div class="relative">
                         <div class="swiper card1Swiper h-64 sm:h-72 w-full">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="1.jpeg" alt="Photo 1" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="2.jpeg" alt="Photo 2" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="3.jpeg" alt="Photo 3" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="4.jpeg" alt="Photo 4" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="5.jpeg" alt="Photo 5" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="6.jpeg" alt="Photo 6" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="7.jpeg" alt="Photo 7" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="8.jpeg" alt="Photo 8" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="9.jpeg" alt="Photo 9" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="10.jpeg" alt="Photo 10" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="11.jpeg" alt="Photo 11" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="12.jpeg" alt="Photo 12" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="13.jpeg" alt="Photo 13" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="14.jpeg" alt="Photo 14" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="15.jpeg" alt="Photo 15" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><a href="1.jpeg" class="glightbox" data-gallery="card1"><img src="1.jpeg" alt="Photo 1" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="2.jpeg" class="glightbox" data-gallery="card1"><img src="2.jpeg" alt="Photo 2" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="3.jpeg" class="glightbox" data-gallery="card1"><img src="3.jpeg" alt="Photo 3" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="4.jpeg" class="glightbox" data-gallery="card1"><img src="4.jpeg" alt="Photo 4" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="5.jpeg" class="glightbox" data-gallery="card1"><img src="5.jpeg" alt="Photo 5" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="6.jpeg" class="glightbox" data-gallery="card1"><img src="6.jpeg" alt="Photo 6" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="7.jpeg" class="glightbox" data-gallery="card1"><img src="7.jpeg" alt="Photo 7" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="8.jpeg" class="glightbox" data-gallery="card1"><img src="8.jpeg" alt="Photo 8" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="9.jpeg" class="glightbox" data-gallery="card1"><img src="9.jpeg" alt="Photo 9" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="10.jpeg" class="glightbox" data-gallery="card1"><img src="10.jpeg" alt="Photo 10" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="11.jpeg" class="glightbox" data-gallery="card1"><img src="11.jpeg" alt="Photo 11" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="12.jpeg" class="glightbox" data-gallery="card1"><img src="12.jpeg" alt="Photo 12" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="13.jpeg" class="glightbox" data-gallery="card1"><img src="13.jpeg" alt="Photo 13" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="14.jpeg" class="glightbox" data-gallery="card1"><img src="14.jpeg" alt="Photo 14" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="15.jpeg" class="glightbox" data-gallery="card1"><img src="15.jpeg" alt="Photo 15" class="w-full h-full object-cover cursor-pointer"></a></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next !text-white drop-shadow"></div>
@@ -396,23 +429,23 @@
                     <div class="relative">
                         <div class="swiper card2Swiper h-64 sm:h-72 w-full">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="21.jpeg" alt="Photo 21" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="22.jpeg" alt="Photo 22" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="23.jpeg" alt="Photo 23" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="24.jpeg" alt="Photo 24" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="25.jpeg" alt="Photo 25" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="26.jpeg" alt="Photo 26" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="27.jpeg" alt="Photo 27" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="28.jpeg" alt="Photo 28" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="29.jpeg" alt="Photo 29" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="30.jpeg" alt="Photo 30" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="31.jpeg" alt="Photo 31" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="32.jpeg" alt="Photo 32" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="33.jpeg" alt="Photo 33" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="34.jpeg" alt="Photo 34" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="35.jpeg" alt="Photo 35" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="36.jpeg" alt="Photo 36" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="37.jpeg" alt="Photo 37" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><a href="21.jpeg" class="glightbox" data-gallery="card2"><img src="21.jpeg" alt="Photo 21" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="22.jpeg" class="glightbox" data-gallery="card2"><img src="22.jpeg" alt="Photo 22" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="23.jpeg" class="glightbox" data-gallery="card2"><img src="23.jpeg" alt="Photo 23" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="24.jpeg" class="glightbox" data-gallery="card2"><img src="24.jpeg" alt="Photo 24" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="25.jpeg" class="glightbox" data-gallery="card2"><img src="25.jpeg" alt="Photo 25" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="26.jpeg" class="glightbox" data-gallery="card2"><img src="26.jpeg" alt="Photo 26" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="27.jpeg" class="glightbox" data-gallery="card2"><img src="27.jpeg" alt="Photo 27" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="28.jpeg" class="glightbox" data-gallery="card2"><img src="28.jpeg" alt="Photo 28" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="29.jpeg" class="glightbox" data-gallery="card2"><img src="29.jpeg" alt="Photo 29" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="30.jpeg" class="glightbox" data-gallery="card2"><img src="30.jpeg" alt="Photo 30" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="31.jpeg" class="glightbox" data-gallery="card2"><img src="31.jpeg" alt="Photo 31" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="32.jpeg" class="glightbox" data-gallery="card2"><img src="32.jpeg" alt="Photo 32" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="33.jpeg" class="glightbox" data-gallery="card2"><img src="33.jpeg" alt="Photo 33" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="34.jpeg" class="glightbox" data-gallery="card2"><img src="34.jpeg" alt="Photo 34" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="35.jpeg" class="glightbox" data-gallery="card2"><img src="35.jpeg" alt="Photo 35" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="36.jpeg" class="glightbox" data-gallery="card2"><img src="36.jpeg" alt="Photo 36" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="37.jpeg" class="glightbox" data-gallery="card2"><img src="37.jpeg" alt="Photo 37" class="w-full h-full object-cover cursor-pointer"></a></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next !text-white drop-shadow"></div>
@@ -453,29 +486,29 @@
                     <div class="relative">
                         <div class="swiper card3Swiper h-64 sm:h-72 w-full">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="40.jpeg" alt="Photo 40" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="41.jpeg" alt="Photo 41" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="42.jpeg" alt="Photo 42" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="43.jpeg" alt="Photo 43" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="44.jpeg" alt="Photo 44" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="45.jpeg" alt="Photo 45" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="46.jpeg" alt="Photo 46" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="47.jpeg" alt="Photo 47" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="48.jpeg" alt="Photo 48" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="49.jpeg" alt="Photo 49" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="50.jpeg" alt="Photo 50" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="51.jpeg" alt="Photo 51" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="52.jpeg" alt="Photo 52" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="53.jpeg" alt="Photo 53" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="54.jpeg" alt="Photo 54" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="55.jpeg" alt="Photo 55" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="56.jpeg" alt="Photo 56" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="57.jpeg" alt="Photo 57" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="58.jpeg" alt="Photo 58" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="59.jpeg" alt="Photo 59" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="60.jpeg" alt="Photo 60" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="61.jpeg" alt="Photo 61" class="w-full h-full object-cover"></div>
-                                <div class="swiper-slide"><img src="62.jpeg" alt="Photo 62" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><a href="40.jpeg" class="glightbox" data-gallery="card3"><img src="40.jpeg" alt="Photo 40" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="41.jpeg" class="glightbox" data-gallery="card3"><img src="41.jpeg" alt="Photo 41" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="42.jpeg" class="glightbox" data-gallery="card3"><img src="42.jpeg" alt="Photo 42" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="43.jpeg" class="glightbox" data-gallery="card3"><img src="43.jpeg" alt="Photo 43" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="44.jpeg" class="glightbox" data-gallery="card3"><img src="44.jpeg" alt="Photo 44" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="45.jpeg" class="glightbox" data-gallery="card3"><img src="45.jpeg" alt="Photo 45" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="46.jpeg" class="glightbox" data-gallery="card3"><img src="46.jpeg" alt="Photo 46" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="47.jpeg" class="glightbox" data-gallery="card3"><img src="47.jpeg" alt="Photo 47" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="48.jpeg" class="glightbox" data-gallery="card3"><img src="48.jpeg" alt="Photo 48" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="49.jpeg" class="glightbox" data-gallery="card3"><img src="49.jpeg" alt="Photo 49" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="50.jpeg" class="glightbox" data-gallery="card3"><img src="50.jpeg" alt="Photo 50" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="51.jpeg" class="glightbox" data-gallery="card3"><img src="51.jpeg" alt="Photo 51" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="52.jpeg" class="glightbox" data-gallery="card3"><img src="52.jpeg" alt="Photo 52" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="53.jpeg" class="glightbox" data-gallery="card3"><img src="53.jpeg" alt="Photo 53" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="54.jpeg" class="glightbox" data-gallery="card3"><img src="54.jpeg" alt="Photo 54" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="55.jpeg" class="glightbox" data-gallery="card3"><img src="55.jpeg" alt="Photo 55" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="56.jpeg" class="glightbox" data-gallery="card3"><img src="56.jpeg" alt="Photo 56" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="57.jpeg" class="glightbox" data-gallery="card3"><img src="57.jpeg" alt="Photo 57" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="58.jpeg" class="glightbox" data-gallery="card3"><img src="58.jpeg" alt="Photo 58" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="59.jpeg" class="glightbox" data-gallery="card3"><img src="59.jpeg" alt="Photo 59" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="60.jpeg" class="glightbox" data-gallery="card3"><img src="60.jpeg" alt="Photo 60" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="61.jpeg" class="glightbox" data-gallery="card3"><img src="61.jpeg" alt="Photo 61" class="w-full h-full object-cover cursor-pointer"></a></div>
+                                <div class="swiper-slide"><a href="62.jpeg" class="glightbox" data-gallery="card3"><img src="62.jpeg" alt="Photo 62" class="w-full h-full object-cover cursor-pointer"></a></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next !text-white drop-shadow"></div>
@@ -719,6 +752,7 @@
                 <h4 class="text-white font-bold text-sm mb-3">Quick Links</h4>
                 <ul class="space-y-2 text-xs text-slate-400">
                     <li><a href="#home" class="hover:text-white">Home</a></li>
+                    <li><a href="#videos" class="hover:text-white">Video</a></li>
                     <li><a href="#services" class="hover:text-white">Services</a></li>
                     <li><a href="#properties" class="hover:text-white">Featured Properties</a></li>
                     <li><a href="#inquiry" class="hover:text-white">Send Inquiry</a></li>
@@ -735,9 +769,18 @@
 
     <!-- Swiper JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GLightbox JS (Libreria per ingrandire e scorrere le foto) -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
     <!-- Custom Scripts -->
     <script>
+        // Inizializza GLightbox per permettere zoom e scorrimento foto
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            loop: true,
+            zoomable: true
+        });
+
         // Mobile menu toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -775,6 +818,38 @@
             pagination: { el: '.card3Swiper .swiper-pagination', clickable: true },
             navigation: { nextEl: '.card3Swiper .swiper-button-next', prevEl: '.card3Swiper .swiper-button-prev' }
         });
+
+        // GESTIONE RIPRODUZIONE VIDEO (SOLO 2 VIDEO: video1.mp4 e video2.mp4 senza audio)
+        const videoList = ['video1.mp4', 'video2.mp4'];
+        let videoIdx = 0;
+        const mainVideo = document.getElementById('featuredVideo');
+
+        function playVideo(index) {
+            videoIdx = index;
+            if (mainVideo) {
+                mainVideo.src = videoList[videoIdx];
+                mainVideo.muted = true;
+                mainVideo.load();
+                mainVideo.play().catch(e => console.log('Autoplay bloccato dal browser:', e));
+            }
+        }
+
+        function nextVideo() {
+            const nextIdx = (videoIdx + 1) % videoList.length;
+            playVideo(nextIdx);
+        }
+
+        function prevVideo() {
+            const prevIdx = (videoIdx - 1 + videoList.length) % videoList.length;
+            playVideo(prevIdx);
+        }
+
+        if (mainVideo) {
+            mainVideo.muted = true;
+            mainVideo.addEventListener('ended', () => {
+                nextVideo();
+            });
+        }
 
         // Filter Function
         function filterProperties(category, event) {
